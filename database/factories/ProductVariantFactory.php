@@ -17,7 +17,8 @@ class ProductVariantFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'colour' => $this->faker->randomElement(['Green', 'Yellow', 'Brown', 'Pink', 'Technicolour']),
+            'size' => $this->faker->randomElement(['S', 'M', 'L', 'XL', 'XXL'])
         ];
     }
 }
