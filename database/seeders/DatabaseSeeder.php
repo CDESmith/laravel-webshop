@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
             ->hasVariants(5)
             ->has(Images::factory(3)->sequence(fn(Sequence $sequence) => ['featured' => $sequence->index === 0]))
             ->create();
+
+        User::factory()->create([
+           'email' => 'cdes@cdesmith.co.uk'
+        ]);
     }
 }
