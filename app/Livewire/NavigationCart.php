@@ -19,4 +19,11 @@ class NavigationCart extends Component
     {
         return view('livewire.navigation-cart');
     }
+
+    public $isActive = false;
+
+    public function mount()
+    {
+        $this->isActive = request()->routeIs('cart');
+    }
 }
